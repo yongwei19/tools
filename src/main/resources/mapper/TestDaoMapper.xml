@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.test.tools.dao.TestDao">
+
+    <!-- 根据id查询  -->
+    <select id="getById" resultType="com.test.tools.entity.TestEntity" parameterType="java.lang.Integer">
+        select *
+        from test_demo
+        where id = #{id}
+    </select>
+
+</mapper>

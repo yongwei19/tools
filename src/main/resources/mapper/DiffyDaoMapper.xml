@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.test.tools.dao.DiffyDao">
+
+    <!-- 插入生成记录  -->
+    <insert id="addCommitLog" parameterType="com.test.tools.entity.DiffyEntity">
+        INSERT INTO diffy_commit_log
+        (primary_ip, primary_port, secondary_ip, secondary_port, candidate_ip, candidate_port, protocol, service_name, proxy_port, admin_port, http_port, root_url, email, allow_http_side_effects, exclude_http_headers_comparison, commit_date)
+        VALUES(
+        #{primaryIp},
+        #{primaryPort},
+        #{secondaryIp},
+        #{secondaryPort},
+        #{candidateIp},
+        #{candidatePort},
+        #{protocol},
+        #{serviceName},
+        #{proxyPort},
+        #{adminPort},
+        #{httpPort},
+        #{rootUrl},
+        #{email},
+        #{allowHttpSideEffects},
+        #{excludeHttpHeadersComparison},
+        #{commitDate}
+        )
+    </insert>
+
+    <!-- 获取一个diffy配置  -->
+    <select id="getCommandParam" resultType="com.test.tools.entity.DiffyEntity">
+        SELECT primary_ip, primary_port, secondary_ip, secondary_port, candidate_ip, candidate_port, protocol, service_name, proxy_port, admin_port, http_port, root_url, email, allow_http_side_effects, exclude_http_headers_comparison, commit_date
+        FROM tools.diffy_commit_log
+        ORDER BY id desc
+        LIMIT 1
+    </select>
+
+</mapper>
