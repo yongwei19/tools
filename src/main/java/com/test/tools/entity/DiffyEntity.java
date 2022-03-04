@@ -1,17 +1,32 @@
 package com.test.tools.entity;
 
+import com.test.tools.validation.Insert;
+import lombok.Data;
 
-public class DiffyEntity {
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
+
+@Data
+public class DiffyEntity implements java.io.Serializable{
+
+    @NotBlank(message = "稳定版本的ip地址不能为空",groups = Insert.class)
+    @NotNull(message = "稳定版本的ip地址不能为空",groups = Insert.class)
     protected String primaryIp;
 
+    @NotNull(message = "稳定版本的端口不能为空", groups = Insert.class)
+    @NotBlank(message = "稳定版本的端口不能为空",groups = Insert.class)
     protected String primaryPort;
 
+    @NotNull(message = "副本的ip地址不能为空",groups = Insert.class)
     protected String secondaryIp;
 
+    @NotBlank(message = "副本的端口不能为空",groups = Insert.class)
     protected String secondaryPort;
 
+    @NotNull(message = "候选版本的ip地址不能为空",groups = Insert.class)
     protected String candidateIp;
 
+    @NotBlank(message = "候选版本的端口不能为空",groups = Insert.class)
     protected String candidatePort;
 
     protected String protocol;
@@ -26,6 +41,7 @@ public class DiffyEntity {
 
     protected String rootUrl;
 
+    @NotBlank(message = "邮箱不能为空",groups = Insert.class)
     protected String email;
 
     protected String allowHttpSideEffects;

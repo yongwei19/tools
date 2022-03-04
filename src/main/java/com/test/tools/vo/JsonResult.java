@@ -1,35 +1,39 @@
 package com.test.tools.vo;
 
-public class ResponseVo {
+public class JsonResult {
     private int code;
     private Object data;
     private String msg;
 
-    public ResponseVo() {
+    public JsonResult() {
     }
 
-    public ResponseVo(int code, Object data) {
+    public JsonResult(int code, Object data) {
         this.code = code;
         this.data = data;
     }
 
-    public ResponseVo(int code, Object data, String msg) {
+    public JsonResult(int code, Object data, String msg) {
         this.code = code;
         this.data = data;
         this.msg = msg;
     }
 
-    public static ResponseVo buildSuccess(Object data){
-        return new ResponseVo(200,data);
+    public static JsonResult buildSuccess(Object data){
+        return new JsonResult(200,data);
     }
 
-    public static ResponseVo buildError(String msg){
-        return new ResponseVo(-1,"",msg);
+    public static JsonResult warn(String msg){
+        return new JsonResult(-1,"",msg);
     }
 
-    public static ResponseVo buildError(int code, String msg){
-        return new ResponseVo(code,"",msg);
+    public static JsonResult fail(String msg){
+        return new JsonResult(-1,"",msg);
     }
+
+//    public static JsonResult buildError(int code, String msg){
+//        return new JsonResult(code,"",msg);
+//    }
 
     public String getMsg() {
         return msg;
