@@ -3,6 +3,8 @@ package com.test.tools.entity;
 import com.test.tools.validation.Insert;
 import lombok.Data;
 
+import javax.validation.constraints.AssertTrue;
+import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
@@ -42,6 +44,7 @@ public class DiffyEntity implements java.io.Serializable{
     protected String rootUrl;
 
     @NotBlank(message = "邮箱不能为空",groups = Insert.class)
+    @Email(message = "邮箱地址不合法")
     protected String email;
 
     protected String allowHttpSideEffects;

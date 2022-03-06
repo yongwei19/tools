@@ -31,9 +31,6 @@ public class JsonResult {
         return new JsonResult(-1,"",msg);
     }
 
-//    public static JsonResult buildError(int code, String msg){
-//        return new JsonResult(code,"",msg);
-//    }
 
     public String getMsg() {
         return msg;

@@ -5,7 +5,6 @@ import com.test.tools.service.DiffyService;
 import com.test.tools.validation.Insert;
 import com.test.tools.vo.JsonResult;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.*;

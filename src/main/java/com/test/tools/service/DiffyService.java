@@ -16,6 +16,7 @@ public class DiffyService {
     // 将记录保存到数据库中
     public int addCommitLog(DiffyEntity diffyEntity){
         TimeTools t = new TimeTools();
+        // 提交日期为当前时间
         diffyEntity.setCommitDate(t.getTimeNow());
         return diffyDao.addCommitLog(diffyEntity);
     }
