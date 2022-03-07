@@ -15,6 +15,7 @@ public class TestController {
     @Autowired
     private TestService testService;
 
+    // dome测试
     @RequestMapping(value = "/get/{id}",method = RequestMethod.GET)
     public TestEntity test(@PathVariable Integer id){
         System.out.println("id:" + id);
