@@ -2,7 +2,7 @@ package com.test.tools.controller;
 
 import com.test.tools.entity.DiffyEntity;
 import com.test.tools.service.DiffyService;
-import com.test.tools.validation.Insert;
+import com.test.tools.utils.validation.Insert;
 import com.test.tools.vo.JsonResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
@@ -17,7 +17,7 @@ public class DiffyController {
     private DiffyService diffyService;
 
 
-    @RequestMapping(value = "/get/diffy",method = RequestMethod.GET)
+    @GetMapping(value = "/get/diffy")
     public JsonResult getCommand(){
         JsonResult jsonResult = new JsonResult(200,diffyService.getStartCommand(),"success");
         return jsonResult;

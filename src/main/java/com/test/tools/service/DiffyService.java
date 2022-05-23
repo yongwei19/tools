@@ -2,7 +2,7 @@ package com.test.tools.service;
 
 import com.test.tools.dao.DiffyDao;
 import com.test.tools.entity.DiffyEntity;
-import com.test.tools.tool.TimeTools;
+import com.test.tools.utils.TimeTools;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

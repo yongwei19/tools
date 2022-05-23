@@ -1,4 +1,4 @@
-package com.test.tools.tool;
+package com.test.tools.utils;
 
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;

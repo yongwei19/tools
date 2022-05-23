@@ -1,9 +1,8 @@
 package com.test.tools.entity;
 
-import com.test.tools.validation.Insert;
+import com.test.tools.utils.validation.Insert;
 import lombok.Data;
 
-import javax.validation.constraints.AssertTrue;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;

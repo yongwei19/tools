@@ -9,7 +9,7 @@ import org.springframework.transaction.annotation.TransactionManagementConfigure
 import javax.sql.DataSource;
 
 /**
- * 事务配置类，不可缺少，尚未知具体作用
+ * 事务配置类，不可缺少
  */
 @Configuration
 @EnableTransactionManagement

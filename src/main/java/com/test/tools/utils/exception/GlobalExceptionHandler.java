@@ -1,4 +1,4 @@
-package com.test.tools.exception;
+package com.test.tools.utils.exception;
 
 import com.test.tools.vo.JsonResult;
 import org.apache.catalina.connector.ClientAbortException;
@@ -19,6 +19,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.validation.UnexpectedTypeException;
 import java.sql.SQLTransientConnectionException;
 
+/**
+ * @author zhangyw
+ * @date 2022/5/10
+ * 全局异常处理类
+ */
 @ControllerAdvice
 public class GlobalExceptionHandler {
     // 声明要捕获的异常
